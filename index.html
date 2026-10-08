@@ -1,1679 +1,2866 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="a62uXYkawjSIwYDNpGzG4iRWBvgRafd32WJ3WMK4rtc" />
+      <meta name="google-site-verification" content="a62uXYkawjSIwYDNpGzG4iRWBvgRafd32WJ3WMK4rtc" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Students Picks — From Student, To Students.">
 <title>Students Picks 🎀</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
-    font-family:"Segoe UI",Arial,sans-serif;
-    background:#fff8fc;color:#302735;line-height:1.6
+  font-family:'Nunito',sans-serif;
+  background:#fff8fc;
+  color:#3d3040;
+  line-height:1.6;
 }
-button,input,textarea,select{font:inherit}
-button{cursor:pointer}
+
+button,input,textarea,select{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+  border:none;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* ================= HEADER ================= */
+
 header{
-    position:sticky;top:0;z-index:1000;
-    background:#fff9fcf2;backdrop-filter:blur(12px);
-    border-bottom:1px solid #f1dce8
-}
-.nav{
-    max-width:1200px;margin:auto;padding:13px 18px;
-    display:flex;align-items:center;justify-content:space-between;gap:15px
-}
-.logo{font-size:22px;font-weight:800;color:#e85d9e}
-.logo span{color:#ff9fc6}
-nav{display:flex;gap:4px;flex-wrap:wrap}
-nav button{
-    border:0;background:transparent;padding:8px 10px;
-    border-radius:20px;font-weight:600;color:#594b59
-}
-nav button:hover{background:#ffe5f1;color:#d64287}
-.user-area{display:flex;align-items:center;gap:8px}
-.user-name{font-size:13px;font-weight:700;color:#d5488b}
-.small-btn{
-    border:0;background:#ffe4f0;color:#d44284;
-    padding:7px 11px;border-radius:18px;font-weight:700
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,248,252,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid #f4dce9;
 }
 
-/* login */
-.login-screen{
-    position:fixed;inset:0;z-index:5000;background:#fff8fc;
-    display:flex;align-items:center;justify-content:center;padding:20px
+.navbar{
+  max-width:1250px;
+  margin:auto;
+  padding:14px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
-.login-box{
-    width:min(430px,100%);background:white;border:1px solid #efd9e6;
-    border-radius:30px;padding:32px;box-shadow:0 20px 60px #9e4d7918;
-    text-align:center
-}
-.login-logo{font-size:42px;margin-bottom:5px}
-.login-box h1{color:#e35b98;margin-bottom:4px}
-.login-box p{color:#817482;margin-bottom:20px}
-.login-box input{
-    width:100%;padding:13px;margin:6px 0;border:1px solid #ead3df;
-    border-radius:14px;outline:none
-}
-.login-box button{
-    width:100%;padding:13px;margin-top:10px;border:0;border-radius:20px;
-    background:#ed6ba7;color:white;font-weight:800
-}
-.login-switch{
-    background:none!important;color:#d84c8c!important;margin-top:8px!important
-}
-.login-msg{margin-top:10px;font-size:14px;font-weight:700}
 
-/* hero */
+.logo{
+  font-family:'Poppins',sans-serif;
+  font-weight:800;
+  font-size:22px;
+  color:#d75b91;
+  white-space:nowrap;
+}
+
+.logo span{
+  color:#8b6fc5;
+}
+
+.nav-links{
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.nav-links button{
+  background:transparent;
+  padding:8px 11px;
+  border-radius:20px;
+  color:#604f63;
+  font-weight:700;
+  transition:.2s;
+}
+
+.nav-links button:hover{
+  background:#ffe5f0;
+  color:#c84f86;
+}
+
+.nav-cta{
+  background:#d9659b !important;
+  color:white !important;
+}
+
+/* ================= HERO ================= */
+
 .hero{
-    min-height:590px;padding:65px 20px;display:flex;align-items:center;
-    background:
-    radial-gradient(circle at 10% 15%,#ffe3ef 0 80px,transparent 81px),
-    radial-gradient(circle at 90% 20%,#e8e0ff 0 90px,transparent 91px),
-    radial-gradient(circle at 80% 90%,#dcf7ef 0 100px,transparent 101px),
-    #fff8fc
+  min-height:610px;
+  max-width:1250px;
+  margin:auto;
+  padding:80px 25px 70px;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  align-items:center;
+  gap:40px;
+  overflow:hidden;
 }
-.hero-inner{
-    max-width:1100px;width:100%;margin:auto;
-    display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center
+
+.hero-text{
+  position:relative;
 }
+
 .badge{
-    display:inline-block;background:#ffe4f0;color:#d84488;
-    padding:8px 15px;border-radius:25px;font-weight:700;margin-bottom:15px
+  display:inline-block;
+  background:#ffe4ef;
+  color:#c24e82;
+  padding:8px 15px;
+  border-radius:30px;
+  font-weight:800;
+  margin-bottom:18px;
 }
-.hero h1{font-size:clamp(45px,7vw,78px);line-height:1;color:#3d3040}
-.hero h1 span{color:#ed6ba7}
-.hero h2{font-size:24px;margin:17px 0 8px}
-.hero p{max-width:650px;color:#776a77;font-size:18px}
-.creator{margin-top:15px;color:#d34c8c;font-weight:700}
-.buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
-.primary,.secondary{
-    border:0;padding:12px 20px;border-radius:25px;font-weight:800
-}
-.primary{background:#ed6ba7;color:white}
-.secondary{background:white;color:#d64587;border:1px solid #efcbdc}
 
-/* robot */
-.robot-wrap{display:flex;justify-content:center}
+.hero h1{
+  font-family:'Poppins',sans-serif;
+  font-size:clamp(45px,7vw,78px);
+  line-height:1.02;
+  color:#49364d;
+}
+
+.hero h1 span{
+  color:#d65c91;
+}
+
+.hero-sub{
+  font-size:24px;
+  margin:20px 0 7px;
+  color:#715d73;
+  font-weight:700;
+}
+
+.creator{
+  color:#9b819c;
+  font-size:16px;
+  margin-bottom:28px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.primary-btn,
+.secondary-btn{
+  padding:13px 21px;
+  border-radius:28px;
+  font-weight:800;
+  transition:.2s;
+}
+
+.primary-btn{
+  background:#d85f96;
+  color:white;
+  box-shadow:0 8px 20px rgba(216,95,150,.22);
+}
+
+.primary-btn:hover{
+  transform:translateY(-2px);
+}
+
+.secondary-btn{
+  background:#fff;
+  border:2px solid #ead4e1;
+  color:#6a566b;
+}
+
+.secondary-btn:hover{
+  background:#fff0f7;
+}
+
+.robot-area{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+
 .robot{
-    width:235px;height:235px;background:white;border:8px solid #f1b4d0;
-    border-radius:45%;position:relative;box-shadow:0 25px 50px #c85e9130;
-    animation:float 3s ease-in-out infinite
+  width:270px;
+  height:270px;
+  background:#f8cce0;
+  border:7px solid #8e72bf;
+  border-radius:38% 38% 43% 43%;
+  position:relative;
+  box-shadow:0 20px 50px rgba(124,91,130,.18);
+  animation:float 3.5s ease-in-out infinite;
 }
-.robot:before,.robot:after{
-    content:"";position:absolute;width:17px;height:55px;
-    background:#f1b4d0;top:78px;border-radius:20px
+
+.robot:before{
+  content:"";
+  position:absolute;
+  width:95px;
+  height:15px;
+  background:#8e72bf;
+  border-radius:20px;
+  top:-29px;
+  left:80px;
 }
-.robot:before{left:-28px}.robot:after{right:-28px}
+
+.robot:after{
+  content:"";
+  position:absolute;
+  width:15px;
+  height:35px;
+  background:#8e72bf;
+  border-radius:20px;
+  top:-48px;
+  left:120px;
+}
+
+.eyes{
+  display:flex;
+  gap:55px;
+  position:absolute;
+  top:75px;
+  left:62px;
+}
+
 .eye{
-    position:absolute;width:33px;height:43px;background:#302735;
-    border-radius:50%;top:75px
+  width:31px;
+  height:40px;
+  background:#47374d;
+  border-radius:50%;
+  position:relative;
 }
-.eye.left{left:55px}.eye.right{right:55px}
+
 .eye:after{
-    content:"";position:absolute;width:8px;height:11px;background:white;
-    border-radius:50%;left:7px;top:6px
+  content:"";
+  position:absolute;
+  width:8px;
+  height:10px;
+  background:white;
+  border-radius:50%;
+  top:7px;
+  left:7px;
 }
+
 .mouth{
-    position:absolute;width:43px;height:20px;border-bottom:5px solid #ed6ba7;
-    border-radius:50%;left:50%;transform:translateX(-50%);top:137px
-}
-.ant{
-    position:absolute;width:7px;height:32px;background:#f1b4d0;
-    top:-36px;left:50%;transform:translateX(-50%)
-}
-.antdot{
-    position:absolute;width:19px;height:19px;border-radius:50%;
-    background:#ed6ba7;top:-52px;left:50%;transform:translateX(-50%)
-}
-.float{position:absolute;font-size:25px}
-.f1{right:-35px;top:10px}.f2{left:-45px;bottom:15px}.f3{right:-25px;bottom:20px}
-@keyframes float{50%{transform:translateY(-10px)}}
-
-/* sections */
-section{max-width:1200px;margin:auto;padding:70px 20px}
-.title{text-align:center;margin-bottom:35px}
-.title h2{font-size:36px;color:#3d3040}
-.title p{color:#817482}
-.search{max-width:600px;margin:0 auto 25px}
-.search input{
-    width:100%;padding:14px 18px;border:1px solid #efcddd;
-    border-radius:30px;outline:none;background:white
-}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
-.card,.tool,.quiz,.resume,.planner-box,.profile-box,.notes-box,.interview-box{
-    background:white;border:1px solid #efdce7;border-radius:22px;
-    padding:22px;box-shadow:0 8px 25px #a04e7c0b
-}
-.card{transition:.2s}
-.card:hover{transform:translateY(-4px)}
-.icon{font-size:34px}
-.card h3{margin:7px 0}
-.card p{font-size:14px;color:#766a75}
-.card button,.tool button,.notes-box button,.interview-box button{
-    margin-top:13px;border:0;background:#ffe4f0;color:#d34285;
-    padding:9px 14px;border-radius:20px;font-weight:700
+  width:65px;
+  height:28px;
+  border-bottom:6px solid #47374d;
+  border-radius:50%;
+  position:absolute;
+  left:96px;
+  top:130px;
 }
 
-/* lesson */
-.lesson{
-    display:none;background:white;border:1px solid #efdce7;
-    border-radius:24px;padding:27px;margin-top:25px
+.cheek{
+  position:absolute;
+  width:30px;
+  height:13px;
+  background:#ef8fb5;
+  border-radius:50%;
+  top:133px;
 }
-.lesson.show{display:block}
-.lesson h3{color:#df518f;font-size:27px}
-.lesson pre,.codebox{
-    background:#302735;color:#fff;padding:17px;border-radius:14px;
-    overflow:auto;margin:15px 0
-}
-.close{float:right;border:0;background:#ffe4f0;border-radius:20px;padding:6px 10px}
 
-/* tabs */
-.tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:22px}
-.tab{
-    border:1px solid #efcddd;background:white;color:#655667;
-    padding:9px 16px;border-radius:22px;font-weight:700
+.cheek.left{left:35px;}
+.cheek.right{right:35px;}
+
+.heart{
+  position:absolute;
+  font-size:40px;
+  top:190px;
+  left:113px;
 }
-.tab.active{background:#ed6ba7;color:white}
-.quiz{max-width:820px;margin:auto}
-.question{padding:17px 0;border-bottom:1px solid #f2e5eb}
-.option{
-    display:block;background:#fff8fc;margin:8px 0;padding:9px 12px;
-    border-radius:12px;cursor:pointer
+
+.floating{
+  position:absolute;
+  font-size:28px;
+  animation:float 3s ease-in-out infinite;
 }
+
+.f1{top:5%;right:12%;}
+.f2{bottom:15%;left:5%;animation-delay:.7s;}
+.f3{top:25%;left:1%;animation-delay:1.2s;}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-12px);}
+}
+
+/* ================= GENERAL ================= */
+
+.section{
+  max-width:1250px;
+  margin:auto;
+  padding:75px 22px;
+}
+
+.section-head{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.section-head h2{
+  font-family:'Poppins',sans-serif;
+  font-size:34px;
+  color:#4b394f;
+}
+
+.section-head p{
+  color:#8a7489;
+  margin-top:5px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.card{
+  background:white;
+  border:1px solid #f1dce7;
+  border-radius:24px;
+  padding:24px;
+  box-shadow:0 10px 30px rgba(98,65,89,.06);
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 35px rgba(98,65,89,.1);
+}
+
+.card-icon{
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+.card h3{
+  font-size:21px;
+  color:#504054;
+  margin-bottom:5px;
+}
+
+.card p{
+  color:#877486;
+  font-size:15px;
+}
+
+.card-btn{
+  margin-top:16px;
+  background:#fff0f6;
+  color:#c45285;
+  padding:9px 15px;
+  border-radius:18px;
+  font-weight:800;
+}
+
+.card-btn:hover{
+  background:#ffe0ed;
+}
+
+/* ================= LEARNING ================= */
+
+.learning-section{
+  background:#fff0f7;
+  max-width:none;
+}
+
+.learning-inner{
+  max-width:1250px;
+  margin:auto;
+}
+
+.search-box{
+  max-width:650px;
+  margin:0 auto 28px;
+}
+
+.search-box input{
+  width:100%;
+  padding:15px 20px;
+  border:2px solid #f0d5e3;
+  border-radius:30px;
+  outline:none;
+  background:white;
+}
+
+.search-box input:focus{
+  border-color:#d984ac;
+}
+
+.lesson-card{
+  cursor:pointer;
+}
+
+.lesson-popup{
+  position:fixed;
+  inset:0;
+  background:rgba(44,30,43,.45);
+  backdrop-filter:blur(5px);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  z-index:2000;
+}
+
+.lesson-box{
+  background:white;
+  max-width:720px;
+  width:100%;
+  max-height:85vh;
+  overflow:auto;
+  border-radius:28px;
+  padding:30px;
+  position:relative;
+}
+
+.close{
+  position:absolute;
+  right:18px;
+  top:15px;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#ffe5ef;
+  color:#c24f82;
+  font-size:20px;
+}
+
+.lesson-box h2{
+  color:#c24f82;
+  margin-bottom:15px;
+}
+
+.lesson-box h4{
+  margin-top:18px;
+  color:#59425c;
+}
+
+.lesson-box p{
+  color:#796a79;
+}
+
+/* ================= PRACTICE ================= */
+
+.practice-wrap{
+  background:#faf3ff;
+  max-width:none;
+}
+
+.practice-inner{
+  max-width:1250px;
+  margin:auto;
+}
+
+.quiz-area{
+  margin-top:25px;
+}
+
+.quiz-box{
+  background:white;
+  border:1px solid #eadcf1;
+  border-radius:25px;
+  padding:25px;
+  max-width:850px;
+  margin:auto;
+}
+
+.quiz-tabs{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  justify-content:center;
+  margin-bottom:25px;
+}
+
+.quiz-tabs button{
+  padding:9px 15px;
+  border-radius:20px;
+  background:#eee3f5;
+  color:#654d6b;
+  font-weight:800;
+}
+
+.quiz-tabs button.active{
+  background:#8c70be;
+  color:white;
+}
+
+.question{
+  border-bottom:1px solid #f0e5f0;
+  padding:20px 0;
+}
+
+.question:last-child{
+  border-bottom:0;
+}
+
+.question p{
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.options label{
+  display:block;
+  background:#faf7fb;
+  border:1px solid #eadfe9;
+  margin:7px 0;
+  padding:10px 13px;
+  border-radius:14px;
+  cursor:pointer;
+}
+
+.options label:hover{
+  background:#fff0f7;
+}
+
+.score-box{
+  margin-top:18px;
+  font-size:20px;
+  font-weight:900;
+  color:#c45184;
+}
+
+/* ================= NOTES ================= */
+
+.notes-card{
+  cursor:pointer;
+}
+
+.note-content{
+  display:none;
+  margin-top:15px;
+  padding-top:15px;
+  border-top:1px solid #f0e0e9;
+  color:#756475;
+}
+
+.note-content ul{
+  padding-left:20px;
+}
+
+/* ================= TOOLS ================= */
+
+.tools-section{
+  background:#fff5ea;
+  max-width:none;
+}
+
+.tools-inner{
+  max-width:1250px;
+  margin:auto;
+}
+
+.tool-card input,
+.tool-card textarea,
+.tool-card select{
+  width:100%;
+  padding:11px 13px;
+  border:1px solid #e5d5d9;
+  border-radius:13px;
+  outline:none;
+  margin-top:10px;
+}
+
+.tool-card textarea{
+  min-height:100px;
+  resize:vertical;
+}
+
+.tool-card button{
+  margin-top:11px;
+}
+
 .result{
-    display:none;margin-top:17px;padding:14px;border-radius:14px;
-    background:#f1ebff;color:#554067;font-weight:800
+  margin-top:12px;
+  padding:10px 12px;
+  border-radius:12px;
+  background:#fff2f7;
+  color:#a94c78;
+  font-weight:800;
 }
 
-/* tools */
-.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.tool input,.tool textarea,.resume input,.resume textarea{
-    width:100%;padding:11px;border:1px solid #e8d3df;
-    border-radius:12px;margin:5px 0;outline:none
-}
-.tool textarea{min-height:90px}
-.output{margin-top:10px;color:#d44486;font-weight:700}
+/* ================= COMMUNICATION ================= */
 
-/* vocab */
-.vocab{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}
-.word{
-    background:white;border:1px solid #efdce7;border-radius:17px;
-    padding:17px;text-align:center
+.communication{
+  background:#f1f8ff;
+  max-width:none;
 }
-.word strong{color:#dc508e;display:block}
 
-/* timer */
+.communication-inner{
+  max-width:1250px;
+  margin:auto;
+}
+
+.question-display{
+  max-width:800px;
+  margin:20px auto;
+  background:white;
+  border-radius:25px;
+  padding:30px;
+  text-align:center;
+  font-size:22px;
+  font-weight:800;
+  color:#52627a;
+  min-height:120px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* ================= VOCABULARY ================= */
+
+.vocab-card{
+  text-align:center;
+  background:#fffaf0;
+}
+
+/* ================= INTERVIEW ================= */
+
+.interview{
+  background:#f5f3ff;
+  max-width:none;
+}
+
+.interview-inner{
+  max-width:1250px;
+  margin:auto;
+}
+
+/* ================= TIMER ================= */
+
+.timer-box{
+  max-width:500px;
+  margin:25px auto;
+  background:white;
+  border-radius:30px;
+  padding:30px;
+  text-align:center;
+  border:1px solid #eadcec;
+}
+
 .timer{
-    max-width:500px;margin:auto;background:white;border:1px solid #efdce7;
-    border-radius:25px;padding:30px;text-align:center
+  font-family:'Poppins',sans-serif;
+  font-size:60px;
+  font-weight:800;
+  color:#7b61aa;
+  margin:10px;
 }
-.time{font-size:58px;font-weight:800;color:#df5a94}
-.timer button{border:0;padding:10px 17px;border-radius:20px;margin:4px;font-weight:700}
-.start{background:#ed6ba7;color:white}
-.reset{background:#ffe5f0;color:#d84688}
 
-/* planner */
-.planner-box{max-width:750px;margin:auto}
-.add{display:flex;gap:9px}
-.add input{flex:1;padding:12px;border:1px solid #e8d3df;border-radius:14px}
-.add button{border:0;background:#ed6ba7;color:white;padding:0 18px;border-radius:14px}
+.timer-buttons{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+/* ================= PLANNER ================= */
+
+.planner{
+  background:#effaf5;
+  max-width:none;
+}
+
+.planner-inner{
+  max-width:1250px;
+  margin:auto;
+}
+
+.task-input{
+  display:flex;
+  gap:10px;
+  max-width:700px;
+  margin:auto;
+}
+
+.task-input input{
+  flex:1;
+  padding:13px 16px;
+  border:1px solid #d5e5dc;
+  border-radius:18px;
+  outline:none;
+}
+
+.task-list{
+  max-width:700px;
+  margin:20px auto;
+}
+
 .task{
-    display:flex;align-items:center;gap:10px;padding:12px;margin-top:8px;
-    border:1px solid #efdce7;border-radius:14px
-}
-.task span{flex:1}
-.done span{text-decoration:line-through;opacity:.5}
-.delete{border:0;background:#ffe8ef;padding:5px 8px;border-radius:9px}
-
-/* notes */
-.notes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.note-content{display:none;margin-top:13px;color:#716572}
-.note-content.show{display:block}
-
-/* coding */
-.code-editor textarea{
-    width:100%;min-height:180px;background:#302735;color:white;
-    border:0;border-radius:15px;padding:16px;font-family:monospace
-}
-.code-output{
-    min-height:70px;margin-top:10px;background:#f7f0f5;
-    padding:14px;border-radius:14px;white-space:pre-wrap
+  background:white;
+  border:1px solid #dcebe3;
+  border-radius:17px;
+  padding:12px 15px;
+  margin:8px 0;
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
 
-/* resume */
-.resume{max-width:850px;margin:auto}
-.resume-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.resume textarea{min-height:90px}
-.preview{
-    display:none;margin-top:20px;border:2px dashed #efbfd5;
-    border-radius:18px;padding:25px
+.task span{
+  flex:1;
 }
 
-/* profile */
-.profile-box{max-width:650px;margin:auto;text-align:center}
+.task.done span{
+  text-decoration:line-through;
+  opacity:.5;
+}
+
+.delete-btn{
+  background:#ffe5e5;
+  color:#c65c5c;
+  padding:6px 10px;
+  border-radius:12px;
+}
+
+/* ================= RESUME ================= */
+
+.resume{
+  background:#fff1f1;
+  max-width:none;
+}
+
+.resume-inner{
+  max-width:1250px;
+  margin:auto;
+}
+
+.resume-form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.resume-form .full{
+  grid-column:1/-1;
+}
+
+.resume-form input,
+.resume-form textarea{
+  width:100%;
+  padding:12px 14px;
+  border:1px solid #ead7d7;
+  border-radius:13px;
+  outline:none;
+}
+
+.resume-form textarea{
+  min-height:110px;
+  resize:vertical;
+}
+
+.resume-preview{
+  background:white;
+  margin-top:25px;
+  padding:35px;
+  border-radius:20px;
+  border:1px solid #e8dada;
+  display:none;
+}
+
+.resume-preview h2{
+  color:#443747;
+  font-size:30px;
+}
+
+.resume-preview h3{
+  margin-top:20px;
+  color:#c2577e;
+}
+
+.resume-preview p{
+  color:#6e626d;
+}
+
+/* ================= PROFILE ================= */
+
+.profile{
+  background:#f9f5ff;
+  max-width:none;
+}
+
+.profile-inner{
+  max-width:1000px;
+  margin:auto;
+}
+
+.profile-box{
+  text-align:center;
+  background:white;
+  padding:35px;
+  border-radius:28px;
+  border:1px solid #e7dff0;
+}
+
 .avatar{
-    width:75px;height:75px;border-radius:50%;background:#ffe0ed;
-    display:flex;align-items:center;justify-content:center;
-    font-size:35px;margin:0 auto 12px
+  width:85px;
+  height:85px;
+  border-radius:50%;
+  background:#ffd9e9;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 15px;
+  font-size:40px;
 }
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
-.stat{background:#fff4f8;border-radius:15px;padding:15px}
-.stat strong{display:block;color:#df528f;font-size:22px}
 
-/* about/footer */
-.about{
-    background:white;border:1px solid #efdce7;border-radius:28px;
-    padding:38px;text-align:center
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin-top:25px;
 }
-.about p{max-width:750px;margin:10px auto;color:#756978}
-footer{background:#302735;color:white;text-align:center;padding:35px 20px}
-footer strong{color:#ff9fc6}
 
-/* responsive */
+.stat{
+  background:#faf6ff;
+  padding:18px 10px;
+  border-radius:18px;
+}
+
+.stat strong{
+  display:block;
+  font-size:26px;
+  color:#795fab;
+}
+
+.achievement{
+  margin-top:20px;
+  text-align:left;
+}
+
+.badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:12px;
+}
+
+.badge-item{
+  padding:9px 14px;
+  background:#fff0d9;
+  border-radius:20px;
+  font-weight:800;
+  color:#9c7040;
+}
+
+/* ================= MOTIVATION ================= */
+
+.motivation{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.quote{
+  max-width:800px;
+  margin:20px auto;
+  font-size:27px;
+  font-weight:800;
+  color:#6d5570;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#3e3041;
+  color:#f8eaf2;
+  padding:35px 20px;
+  text-align:center;
+}
+
+footer strong{
+  color:#ff9fc6;
+}
+
+footer p{
+  margin:6px;
+  color:#d7c7d3;
+}
+
+/* ================= RESPONSIVE ================= */
+
 @media(max-width:900px){
-    .hero-inner{grid-template-columns:1fr;text-align:center}
-    .hero p{margin:auto}.buttons{justify-content:center}
-    .grid{grid-template-columns:repeat(2,1fr)}
-    .tools{grid-template-columns:1fr 1fr}
-    .vocab{grid-template-columns:repeat(3,1fr)}
-    .notes-grid{grid-template-columns:1fr 1fr}
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .resume-form{
+    grid-template-columns:1fr;
+  }
+
+  .resume-form .full{
+    grid-column:auto;
+  }
 }
-@media(max-width:600px){
-    nav{display:none}
-    .grid,.tools,.notes-grid,.resume-grid{grid-template-columns:1fr}
-    .vocab{grid-template-columns:1fr 1fr}
-    .hero{padding:45px 15px}
-    section{padding:55px 15px}
-    .title h2{font-size:29px}
-    .robot{width:195px;height:195px}
-    .time{font-size:47px}
-    .stats{grid-template-columns:1fr 1fr 1fr}
+
+@media(max-width:650px){
+  .navbar{
+    flex-direction:column;
+  }
+
+  .nav-links{
+    max-height:180px;
+    overflow:auto;
+  }
+
+  .hero{
+    padding-top:45px;
+  }
+
+  .hero h1{
+    font-size:48px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .task-input{
+    flex-direction:column;
+  }
+
+  .robot{
+    width:220px;
+    height:220px;
+  }
+
+  .eyes{
+    left:47px;
+    gap:45px;
+  }
+
+  .mouth{
+    left:77px;
+  }
+
+  .heart{
+    left:90px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- LOGIN -->
-<div class="login-screen" id="loginScreen">
-    <div class="login-box">
-        <div class="login-logo">🎀</div>
-        <h1>Students Picks</h1>
-        <p id="loginSubtitle">Create your student account</p>
-
-        <input id="loginName" placeholder="Your name">
-        <input id="loginEmail" type="email" placeholder="Email">
-        <input id="loginPassword" type="password" placeholder="Password">
-
-        <button onclick="handleAuth()" id="authButton">Create Account</button>
-        <button class="login-switch" onclick="switchAuth()" id="switchButton">
-            Already have an account? Login
-        </button>
-
-        <div class="login-msg" id="loginMsg"></div>
-    </div>
-</div>
+<!-- ================= HEADER ================= -->
 
 <header>
-<div class="nav">
+  <nav class="navbar">
+    <div class="logo">🎀 Students <span>Picks</span></div>
 
-    <div class="logo">🎀 Students<span>Picks</span></div>
-
-    <nav>
-        <button onclick="go('home')">Home</button>
-        <button onclick="go('learn')">Learn</button>
-        <button onclick="go('practice')">Practice</button>
-        <button onclick="go('notes')">Notes</button>
-        <button onclick="go('tools')">Tools</button>
-        <button onclick="go('planner')">Planner</button>
-        <button onclick="go('resume')">Resume</button>
-        <button onclick="go('profile')">Profile</button>
-    </nav>
-
-    <div class="user-area">
-        <span class="user-name" id="headerName"></span>
-        <button class="small-btn" onclick="logout()">Logout</button>
+    <div class="nav-links">
+      <button onclick="go('home')">Home</button>
+      <button onclick="go('learn')">Learn</button>
+      <button onclick="go('practice')">Practice</button>
+      <button onclick="go('notes')">Notes</button>
+      <button onclick="go('tools')">Tools</button>
+      <button onclick="go('planner')">Planner</button>
+      <button onclick="go('resume')">Resume</button>
+      <button onclick="go('profile')">Profile</button>
     </div>
 
-</div>
+    <button class="nav-cta" onclick="go('learn')">Start Learning ✨</button>
+  </nav>
 </header>
 
-<!-- HERO -->
-<div class="hero" id="home">
-<div class="hero-inner">
 
-<div>
-    <div class="badge">🌷 Made for Students</div>
-    <h1>Students <span>Picks</span> 🎀</h1>
-    <h2>From Student, To Students.</h2>
+<!-- ================= HERO ================= -->
 
-    <p>
-        A simple student platform for learning, practice,
-        useful tools, career preparation and personal growth.
+<section class="hero" id="home">
+
+  <div class="hero-text">
+
+    <span class="badge">🌷 Made for Students</span>
+
+    <h1>
+      Students<br>
+      <span>Picks</span> 🎀
+    </h1>
+
+    <p class="hero-sub">
+      From Student, To Students.
     </p>
 
-    <div class="creator">Created by Sachin Bala 🫶🏻🎀</div>
+    <p class="creator">
+      Created by Sachin Bala 🫶🏻🎀
+    </p>
 
-    <div class="buttons">
-        <button class="primary" onclick="go('learn')">Start Learning ✨</button>
-        <button class="secondary" onclick="go('practice')">Practice Now 📝</button>
+    <div class="hero-buttons">
+      <button class="primary-btn" onclick="go('learn')">
+        Explore Learning 📚
+      </button>
+
+      <button class="secondary-btn" onclick="go('practice')">
+        Practice Now ✨
+      </button>
     </div>
-</div>
 
-<div class="robot-wrap">
+  </div>
+
+  <div class="robot-area">
+
+    <span class="floating f1">✨</span>
+    <span class="floating f2">🎀</span>
+    <span class="floating f3">💗</span>
+
     <div class="robot">
-        <div class="ant"></div>
-        <div class="antdot"></div>
-        <div class="eye left"></div>
-        <div class="eye right"></div>
-        <div class="mouth"></div>
-        <div class="float f1">💗</div>
-        <div class="float f2">✨</div>
-        <div class="float f3">🎀</div>
+
+      <div class="eyes">
+        <div class="eye"></div>
+        <div class="eye"></div>
+      </div>
+
+      <div class="cheek left"></div>
+      <div class="cheek right"></div>
+
+      <div class="mouth"></div>
+
+      <div class="heart">💗</div>
+
     </div>
-</div>
 
-</div>
-</div>
-
-<!-- LEARNING -->
-<section id="learn">
-
-<div class="title">
-    <h2>📚 Learning Hub</h2>
-    <p>Build useful skills step by step.</p>
-</div>
-
-<div class="search">
-    <input id="search" placeholder="🔎 Search a subject..." oninput="searchCards()">
-</div>
-
-<div class="grid">
-
-<div class="card learn-card" data-name="HTML">
-<div class="icon">🌐</div><h3>HTML</h3>
-<p>Build webpage structure.</p>
-<button onclick="lesson('html')">Learn</button>
-</div>
-
-<div class="card learn-card" data-name="CSS">
-<div class="icon">🎨</div><h3>CSS</h3>
-<p>Design beautiful websites.</p>
-<button onclick="lesson('css')">Learn</button>
-</div>
-
-<div class="card learn-card" data-name="Python">
-<div class="icon">🐍</div><h3>Python</h3>
-<p>Start programming.</p>
-<button onclick="lesson('python')">Learn</button>
-</div>
-
-<div class="card learn-card" data-name="C++">
-<div class="icon">💻</div><h3>C++</h3>
-<p>Learn programming logic.</p>
-<button onclick="lesson('cpp')">Learn</button>
-</div>
-
-<div class="card learn-card" data-name="Java">
-<div class="icon">☕</div><h3>Java</h3>
-<p>Learn Java fundamentals.</p>
-<button onclick="lesson('java')">Learn</button>
-</div>
-
-<div class="card learn-card" data-name="English">
-<div class="icon">🇬🇧</div><h3>English</h3>
-<p>Improve vocabulary.</p>
-<button onclick="lesson('english')">Learn</button>
-</div>
-
-<div class="card learn-card" data-name="Grammar">
-<div class="icon">✍️</div><h3>Grammar</h3>
-<p>Strengthen your grammar.</p>
-<button onclick="lesson('grammar')">Learn</button>
-</div>
-
-<div class="card learn-card" data-name="Communication">
-<div class="icon">🗣️</div><h3>Communication</h3>
-<p>Become a better communicator.</p>
-<button onclick="lesson('communication')">Learn</button>
-</div>
-
-<div class="card learn-card" data-name="Student Skills">
-<div class="icon">🌟</div><h3>Student Skills</h3>
-<p>Focus, habits and productivity.</p>
-<button onclick="lesson('skills')">Learn</button>
-</div>
-
-<div class="card learn-card" data-name="Interview">
-<div class="icon">🎤</div><h3>Interview</h3>
-<p>Prepare for interviews.</p>
-<button onclick="lesson('interview')">Learn</button>
-</div>
-
-</div>
-
-<div class="lesson" id="lesson">
-<button class="close" onclick="closeLesson()">✕</button>
-<div id="lessonContent"></div>
-</div>
+  </div>
 
 </section>
 
-<!-- PRACTICE -->
-<section id="practice">
 
-<div class="title">
-<h2>📝 Practice Zone</h2>
-<p>Test your knowledge and improve.</p>
+<!-- ================= LEARNING ================= -->
+
+<section class="section learning-section" id="learn">
+
+  <div class="learning-inner">
+
+    <div class="section-head">
+      <h2>📚 Learning Hub</h2>
+      <p>Learn useful skills step by step.</p>
+    </div>
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="learningSearch"
+        placeholder="🔍 Search HTML, Python, Java, English..."
+        oninput="searchCards()"
+      >
+    </div>
+
+    <div class="grid" id="learningGrid">
+
+      <div class="card lesson-card" data-name="html web development">
+        <div class="card-icon">🌐</div>
+        <h3>HTML</h3>
+        <p>Learn the structure of websites.</p>
+        <button class="card-btn" onclick="lesson('HTML')">Learn →</button>
+      </div>
+
+      <div class="card lesson-card" data-name="css web design">
+        <div class="card-icon">🎨</div>
+        <h3>CSS</h3>
+        <p>Make websites beautiful and responsive.</p>
+        <button class="card-btn" onclick="lesson('CSS')">Learn →</button>
+      </div>
+
+      <div class="card lesson-card" data-name="python programming coding">
+        <div class="card-icon">🐍</div>
+        <h3>Python</h3>
+        <p>Start programming with beginner-friendly concepts.</p>
+        <button class="card-btn" onclick="lesson('Python')">Learn →</button>
+      </div>
+
+      <div class="card lesson-card" data-name="c++ cpp programming">
+        <div class="card-icon">⚙️</div>
+        <h3>C++</h3>
+        <p>Learn programming fundamentals and logic.</p>
+        <button class="card-btn" onclick="lesson('C++')">Learn →</button>
+      </div>
+
+      <div class="card lesson-card" data-name="java programming">
+        <div class="card-icon">☕</div>
+        <h3>Java</h3>
+        <p>Build strong object-oriented programming basics.</p>
+        <button class="card-btn" onclick="lesson('Java')">Learn →</button>
+      </div>
+
+      <div class="card lesson-card" data-name="english language">
+        <div class="card-icon">🇬🇧</div>
+        <h3>English</h3>
+        <p>Improve vocabulary, speaking and writing.</p>
+        <button class="card-btn" onclick="lesson('English')">Learn →</button>
+      </div>
+
+      <div class="card lesson-card" data-name="grammar english">
+        <div class="card-icon">✍️</div>
+        <h3>Grammar</h3>
+        <p>Build a stronger foundation in English grammar.</p>
+        <button class="card-btn" onclick="lesson('Grammar')">Learn →</button>
+      </div>
+
+      <div class="card lesson-card" data-name="communication speaking">
+        <div class="card-icon">💬</div>
+        <h3>Communication</h3>
+        <p>Practice speaking and expressing your ideas.</p>
+        <button class="card-btn" onclick="lesson('Communication')">Learn →</button>
+      </div>
+
+      <div class="card lesson-card" data-name="student skills">
+        <div class="card-icon">🌱</div>
+        <h3>Student Skills</h3>
+        <p>Time management, study habits and productivity.</p>
+        <button class="card-btn" onclick="lesson('Student Skills')">Learn →</button>
+      </div>
+
+      <div class="card lesson-card" data-name="interview career">
+        <div class="card-icon">🎤</div>
+        <h3>Interview</h3>
+        <p>Prepare for common interview situations.</p>
+        <button class="card-btn" onclick="lesson('Interview')">Learn →</button>
+      </div>
+
+      <div class="card lesson-card" data-name="aptitude reasoning">
+        <div class="card-icon">🧠</div>
+        <h3>Aptitude</h3>
+        <p>Improve numerical and logical thinking.</p>
+        <button class="card-btn" onclick="lesson('Aptitude')">Learn →</button>
+      </div>
+
+      <div class="card lesson-card" data-name="resume career job">
+        <div class="card-icon">📄</div>
+        <h3>Career Basics</h3>
+        <p>Learn resume and career preparation basics.</p>
+        <button class="card-btn" onclick="lesson('Career Basics')">Learn →</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= LESSON POPUP ================= -->
+
+<div class="lesson-popup" id="lessonPopup" onclick="closeLesson(event)">
+
+  <div class="lesson-box" onclick="event.stopPropagation()">
+
+    <button class="close" onclick="closeLesson()">×</button>
+
+    <div id="lessonContent"></div>
+
+  </div>
+
 </div>
 
-<div class="tabs">
-<button class="tab active" onclick="showQuiz('general',this)">General</button>
-<button class="tab" onclick="showQuiz('english',this)">English</button>
-<button class="tab" onclick="showQuiz('coding',this)">Coding</button>
-<button class="tab" onclick="showQuiz('grammar',this)">Grammar</button>
-<button class="tab" onclick="showQuiz('aptitude',this)">Aptitude</button>
-</div>
 
-<div class="quiz">
-<div id="quiz-general"></div>
-<div id="quiz-english" style="display:none"></div>
-<div id="quiz-coding" style="display:none"></div>
-<div id="quiz-grammar" style="display:none"></div>
-<div id="quiz-aptitude" style="display:none"></div>
+<!-- ================= PRACTICE ================= -->
 
-<button class="primary" onclick="scoreQuiz()" style="margin-top:18px">
-Check Score 🎯
-</button>
+<section class="section practice-wrap" id="practice">
 
-<div class="result" id="quizResult"></div>
-</div>
+  <div class="practice-inner">
+
+    <div class="section-head">
+      <h2>📝 Practice Zone</h2>
+      <p>Test yourself and improve every day.</p>
+    </div>
+
+    <div class="quiz-tabs">
+      <button class="active" onclick="showQuiz('General',this)">General</button>
+      <button onclick="showQuiz('English',this)">English</button>
+      <button onclick="showQuiz('Coding',this)">Coding</button>
+      <button onclick="showQuiz('Grammar',this)">Grammar</button>
+      <button onclick="showQuiz('Aptitude',this)">Aptitude</button>
+    </div>
+
+    <div class="quiz-area" id="quizArea"></div>
+
+  </div>
 
 </section>
 
-<!-- NOTES -->
-<section id="notes">
 
-<div class="title">
-<h2>📚 Notes & Resources</h2>
-<p>Quick revision material for students.</p>
-</div>
+<!-- ================= NOTES ================= -->
 
-<div class="notes-grid">
+<section class="section" id="notes">
 
-<div class="notes-box">
-<h3>🌐 Web Development</h3>
-<p>HTML → structure<br>CSS → design<br>JavaScript → behavior</p>
-<button onclick="toggleNote(this)">Open Notes</button>
-<div class="note-content">
-<strong>Remember:</strong><br>
-HTML creates elements, CSS styles them, and JavaScript makes pages interactive.
-</div>
-</div>
+  <div class="section-head">
+    <h2>📖 Notes & Resources</h2>
+    <p>Quick revision material for students.</p>
+  </div>
 
-<div class="notes-box">
-<h3>🐍 Python</h3>
-<p>Variables, conditions, loops and functions.</p>
-<button onclick="toggleNote(this)">Open Notes</button>
-<div class="note-content">
-<strong>Basics:</strong><br>
-Variable → stores data<br>
-if → condition<br>
-for/while → repetition<br>
-def → function
-</div>
-</div>
+  <div class="grid">
 
-<div class="notes-box">
-<h3>💻 C++</h3>
-<p>Syntax, variables, loops and functions.</p>
-<button onclick="toggleNote(this)">Open Notes</button>
-<div class="note-content">
-<strong>Core idea:</strong><br>
-Understand input, output, conditions, loops and functions before advanced topics.
-</div>
-</div>
+    <div class="card notes-card" onclick="toggleNote(this)">
+      <div class="card-icon">🌐</div>
+      <h3>Web Development</h3>
+      <p>HTML, CSS and basic web concepts.</p>
+      <div class="note-content">
+        <ul>
+          <li>HTML creates the structure.</li>
+          <li>CSS controls appearance.</li>
+          <li>Responsive design makes websites work on different screens.</li>
+          <li>Practice by building small pages.</li>
+        </ul>
+      </div>
+    </div>
 
-<div class="notes-box">
-<h3>🇬🇧 English</h3>
-<p>Vocabulary and sentence practice.</p>
-<button onclick="toggleNote(this)">Open Notes</button>
-<div class="note-content">
-<strong>Tip:</strong><br>
-Learn a few words daily and use every new word in your own sentence.
-</div>
-</div>
+    <div class="card notes-card" onclick="toggleNote(this)">
+      <div class="card-icon">🐍</div>
+      <h3>Python</h3>
+      <p>Beginner programming revision.</p>
+      <div class="note-content">
+        <ul>
+          <li>Variables store data.</li>
+          <li>if/else handles decisions.</li>
+          <li>Loops repeat tasks.</li>
+          <li>Functions organize reusable logic.</li>
+        </ul>
+      </div>
+    </div>
 
-<div class="notes-box">
-<h3>🧠 Aptitude</h3>
-<p>Numbers, percentages and logic.</p>
-<button onclick="toggleNote(this)">Open Notes</button>
-<div class="note-content">
-<strong>Practice:</strong><br>
-Percentages, ratios, averages, number series and basic logical reasoning.
-</div>
-</div>
+    <div class="card notes-card" onclick="toggleNote(this)">
+      <div class="card-icon">⚙️</div>
+      <h3>C++</h3>
+      <p>Programming fundamentals.</p>
+      <div class="note-content">
+        <ul>
+          <li>Understand variables and data types.</li>
+          <li>Use conditions and loops.</li>
+          <li>Learn arrays and functions.</li>
+          <li>Practice problem solving.</li>
+        </ul>
+      </div>
+    </div>
 
-<div class="notes-box">
-<h3>🎤 Interview</h3>
-<p>Prepare clear and confident answers.</p>
-<button onclick="toggleNote(this)">Open Notes</button>
-<div class="note-content">
-<strong>Remember:</strong><br>
-Be honest, specific and concise. Give examples when discussing your skills.
-</div>
-</div>
+    <div class="card notes-card" onclick="toggleNote(this)">
+      <div class="card-icon">🇬🇧</div>
+      <h3>English</h3>
+      <p>Vocabulary and communication notes.</p>
+      <div class="note-content">
+        <ul>
+          <li>Read something in English every day.</li>
+          <li>Learn a few useful words daily.</li>
+          <li>Speak without worrying about mistakes.</li>
+          <li>Review new vocabulary regularly.</li>
+        </ul>
+      </div>
+    </div>
 
-</div>
+    <div class="card notes-card" onclick="toggleNote(this)">
+      <div class="card-icon">🧮</div>
+      <h3>Aptitude</h3>
+      <p>Important calculation concepts.</p>
+      <div class="note-content">
+        <ul>
+          <li>Percentages</li>
+          <li>Ratios and proportions</li>
+          <li>Averages</li>
+          <li>Profit and loss</li>
+          <li>Time and work</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card notes-card" onclick="toggleNote(this)">
+      <div class="card-icon">🎤</div>
+      <h3>Interview</h3>
+      <p>Quick interview preparation notes.</p>
+      <div class="note-content">
+        <ul>
+          <li>Introduce yourself clearly.</li>
+          <li>Know your resume.</li>
+          <li>Explain your projects.</li>
+          <li>Practice common questions.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<!-- CODING -->
-<section id="coding">
 
-<div class="title">
-<h2>💻 Coding Practice</h2>
-<p>Try small JavaScript challenges directly in the browser.</p>
-</div>
+<!-- ================= TOOLS ================= -->
 
-<div class="code-editor card">
+<section class="section tools-section" id="tools">
 
-<h3>Challenge: Print a Message</h3>
-<p style="margin:8px 0;color:#777">
-Write JavaScript that prints <strong>Hello Students!</strong>
-</p>
+  <div class="tools-inner">
 
-<textarea id="codeInput">console.log("Hello Students!");</textarea>
+    <div class="section-head">
+      <h2>🧮 Student Tools</h2>
+      <p>Small tools that make student life easier.</p>
+    </div>
 
-<button class="primary" onclick="runCode()">Run Code ▶</button>
+    <div class="grid">
 
-<div class="code-output" id="codeOutput">
-Output will appear here...
-</div>
+      <!-- Calculator -->
+      <div class="card tool-card">
 
-</div>
+        <div class="card-icon">🧮</div>
 
-</section>
+        <h3>Calculator</h3>
 
-<!-- TOOLS -->
-<section id="tools">
+        <input id="calcInput" placeholder="Example: 25*4+10">
 
-<div class="title">
-<h2>🧰 Student Tools</h2>
-<p>Useful everyday tools.</p>
-</div>
+        <button class="primary-btn" onclick="calculate()">
+          Calculate
+        </button>
 
-<div class="tools">
+        <div class="result" id="calcResult">Result will appear here.</div>
 
-<div class="tool">
-<h3>🧮 Calculator</h3>
-<input id="calc" placeholder="Example: 25*4+10">
-<button onclick="calculate()">Calculate</button>
-<div class="output" id="calcOut"></div>
-</div>
+      </div>
 
-<div class="tool">
-<h3>📊 Percentage</h3>
-<input id="marks" type="number" placeholder="Your marks">
-<input id="total" type="number" placeholder="Total marks">
-<button onclick="percentage()">Calculate</button>
-<div class="output" id="percentOut"></div>
-</div>
 
-<div class="tool">
-<h3>📈 Average</h3>
-<input id="numbers" placeholder="80,75,90,85">
-<button onclick="average()">Calculate</button>
-<div class="output" id="averageOut"></div>
-</div>
+      <!-- Percentage -->
 
-<div class="tool">
-<h3>🎤 Speaking Topic</h3>
-<p>Speak for 1–2 minutes.</p>
-<button onclick="topic()">Give Topic</button>
-<div class="output" id="topicOut"></div>
-</div>
+      <div class="card tool-card">
 
-<div class="tool">
-<h3>💡 Study Tip</h3>
-<p id="tip">Start with a small focused session.</p>
-<button onclick="newTip()">New Tip</button>
-</div>
+        <div class="card-icon">📊</div>
 
-<div class="tool">
-<h3>🎯 Daily Goal</h3>
-<input id="goal" placeholder="Today's goal">
-<button onclick="saveGoal()">Save Goal</button>
-<div class="output" id="goalOut"></div>
-</div>
+        <h3>Percentage Calculator</h3>
 
-</div>
-</section>
+        <input id="percentObtained" type="number" placeholder="Marks obtained">
 
-<!-- VOCAB -->
-<section>
+        <input id="percentTotal" type="number" placeholder="Total marks">
 
-<div class="title">
-<h2>🇬🇧 Vocabulary</h2>
-<p>Useful words for everyday English.</p>
-</div>
+        <button class="primary-btn" onclick="percentage()">
+          Calculate %
+        </button>
 
-<div class="vocab">
+        <div class="result" id="percentResult">Result will appear here.</div>
 
-<div class="word"><strong>Confident</strong>Sure of yourself.</div>
-<div class="word"><strong>Curious</strong>Wanting to learn.</div>
-<div class="word"><strong>Improve</strong>Become better.</div>
-<div class="word"><strong>Consistent</strong>Doing something regularly.</div>
-<div class="word"><strong>Achieve</strong>Reach a goal.</div>
-<div class="word"><strong>Opportunity</strong>A good chance.</div>
-<div class="word"><strong>Essential</strong>Very necessary.</div>
-<div class="word"><strong>Effort</strong>Energy used to achieve something.</div>
-<div class="word"><strong>Discipline</strong>Doing what needs to be done.</div>
-<div class="word"><strong>Progress</strong>Movement toward a goal.</div>
+      </div>
 
-</div>
-</section>
 
-<!-- COMMUNICATION -->
-<section>
+      <!-- Average -->
 
-<div class="title">
-<h2>🗣️ Communication Practice</h2>
-<p>Practice speaking confidently.</p>
-</div>
+      <div class="card tool-card">
 
-<div class="interview-box" style="max-width:800px;margin:auto;text-align:center">
-<h3 id="communicationQuestion">Tell me about yourself.</h3>
-<p style="color:#777;margin-top:8px">
-Take 60–120 seconds and answer aloud.
-</p>
-<button onclick="nextCommunication()">Next Question 🎤</button>
-</div>
+        <div class="card-icon">📈</div>
 
-</section>
+        <h3>Average Calculator</h3>
 
-<!-- INTERVIEW -->
-<section>
+        <input id="averageInput" placeholder="Example: 80,75,90,85">
 
-<div class="title">
-<h2>🎤 Interview Practice</h2>
-<p>Prepare before your real interview.</p>
-</div>
+        <button class="primary-btn" onclick="average()">
+          Calculate Average
+        </button>
 
-<div class="interview-box" style="max-width:800px;margin:auto">
+        <div class="result" id="averageResult">Result will appear here.</div>
 
-<h3 id="interviewQuestion">What are your strengths?</h3>
+      </div>
 
-<p style="margin-top:10px;color:#777">
-Think about a specific example before answering.
-</p>
 
-<button onclick="nextInterview()">Next Question →</button>
+      <!-- Study Goal -->
 
-</div>
+      <div class="card tool-card">
 
-</section>
+        <div class="card-icon">🎯</div>
 
-<!-- TIMER -->
-<section>
+        <h3>Daily Goal</h3>
 
-<div class="title">
-<h2>⏱️ Focus Timer</h2>
-<p>Study. Focus. Repeat.</p>
-</div>
+        <input id="goalInput" placeholder="Today's study goal">
 
-<div class="timer">
-<div class="time" id="time">25:00</div>
-<button class="start" onclick="startTimer()">Start</button>
-<button onclick="pauseTimer()">Pause</button>
-<button class="reset" onclick="resetTimer()">Reset</button>
-<p style="margin-top:12px;color:#777">25-minute focus session.</p>
-</div>
+        <button class="primary-btn" onclick="saveGoal()">
+          Save Goal
+        </button>
 
-</section>
+        <div class="result" id="goalResult">No goal saved yet.</div>
 
-<!-- PLANNER -->
-<section id="planner">
+      </div>
 
-<div class="title">
-<h2>📅 Study Planner</h2>
-<p>Your tasks are saved in this browser.</p>
-</div>
 
-<div class="planner-box">
+      <!-- Study Tip -->
 
-<div class="add">
-<input id="taskInput" placeholder="Add a study task...">
-<button onclick="addTask()">Add</button>
-</div>
+      <div class="card tool-card">
 
-<div id="taskList"></div>
+        <div class="card-icon">🌱</div>
 
-</div>
-</section>
+        <h3>Study Tip</h3>
 
-<!-- RESUME -->
-<section id="resume">
+        <p>Need a little motivation?</p>
 
-<div class="title">
-<h2>💼 Resume Builder</h2>
-<p>Create a simple student resume.</p>
-</div>
+        <button class="primary-btn" onclick="newTip()">
+          Give Me a Tip ✨
+        </button>
 
-<div class="resume">
+        <div class="result" id="tipResult">
+          Click the button.
+        </div>
 
-<div class="resume-grid">
-<input id="rName" placeholder="Your name">
-<input id="rEmail" placeholder="Email">
-<input id="rPhone" placeholder="Phone">
-<input id="rEducation" placeholder="Education">
-<input id="rSkills" placeholder="Skills">
-<input id="rRole" placeholder="Career goal / Role">
-</div>
+      </div>
 
-<textarea id="rAbout" placeholder="Short profile"></textarea>
-<textarea id="rProjects" placeholder="Projects / Achievements"></textarea>
 
-<button class="primary" onclick="buildResume()">Generate Resume ✨</button>
+      <!-- Speaking Topic -->
 
-<div class="preview" id="resumePreview"></div>
+      <div class="card tool-card">
 
-</div>
-</section>
+        <div class="card-icon">💬</div>
 
-<!-- PROFILE -->
-<section id="profile">
+        <h3>Speaking Topic</h3>
 
-<div class="title">
-<h2>👤 My Profile</h2>
-<p>Your Students Picks dashboard.</p>
-</div>
+        <p>Practice speaking for 1–2 minutes.</p>
 
-<div class="profile-box">
+        <button class="primary-btn" onclick="topic()">
+          Give Topic
+        </button>
 
-<div class="avatar">🎀</div>
-<h2 id="profileName">Student</h2>
-<p id="profileEmail"></p>
+        <div class="result" id="topicResult">
+          Click the button.
+        </div>
 
-<div class="stats">
-<div class="stat">
-<strong id="scoreStat">0</strong>
-Quiz Score
-</div>
-<div class="stat">
-<strong id="taskStat">0</strong>
-Tasks
-</div>
-<div class="stat">
-<strong id="bookmarkStat">0</strong>
-Saved
-</div>
-</div>
+      </div>
 
-<div style="margin-top:20px">
-<h3>🏆 Achievements</h3>
-<p id="achievement">Start learning to unlock achievements!</p>
-</div>
+    </div>
 
-</div>
-</section>
-
-<!-- MOTIVATION -->
-<section>
-
-<div class="title">
-<h2>💗 Motivation Corner</h2>
-<p>Keep going.</p>
-</div>
-
-<div class="interview-box" style="max-width:700px;margin:auto;text-align:center">
-<h2 id="quote">"Small progress is still progress. 🌷"</h2>
-<button onclick="motivate()">Another One ✨</button>
-</div>
+  </div>
 
 </section>
 
-<!-- ABOUT -->
-<section>
 
-<div class="about">
+<!-- ================= VOCABULARY ================= -->
 
-<h2>🎀 About Students Picks</h2>
+<section class="section">
 
-<p>
-Students Picks brings learning, practice, useful tools and
-career preparation together in one simple student platform.
-</p>
+  <div class="section-head">
+    <h2>💗 Vocabulary Corner</h2>
+    <p>Improve your English one word at a time.</p>
+  </div>
 
-<p><strong>From Student, To Students.</strong> 🫶🏻</p>
+  <div class="grid">
 
-<h3 style="margin-top:18px;color:#df518f">
-Created by Sachin Bala 🫶🏻🎀
-</h3>
+    <div class="card vocab-card">
+      <h3>✨ Consistent</h3>
+      <p>Meaning: Doing something regularly.</p>
+      <p><b>Example:</b> Be consistent with your studies.</p>
+    </div>
 
-</div>
+    <div class="card vocab-card">
+      <h3>🌷 Curious</h3>
+      <p>Meaning: Wanting to learn or know more.</p>
+      <p><b>Example:</b> Stay curious and ask questions.</p>
+    </div>
+
+    <div class="card vocab-card">
+      <h3>🎀 Resilient</h3>
+      <p>Meaning: Able to recover after difficulties.</p>
+      <p><b>Example:</b> A resilient student keeps trying.</p>
+    </div>
+
+  </div>
 
 </section>
+
+
+<!-- ================= COMMUNICATION ================= -->
+
+<section class="section communication">
+
+  <div class="communication-inner">
+
+    <div class="section-head">
+      <h2>💬 Communication Practice</h2>
+      <p>Speak for one minute on the topic shown.</p>
+    </div>
+
+    <div class="question-display" id="communicationQuestion">
+      Tell me about yourself.
+    </div>
+
+    <div style="text-align:center;">
+      <button class="primary-btn" onclick="nextCommunication()">
+        Next Topic ✨
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= INTERVIEW ================= -->
+
+<section class="section interview" id="interview">
+
+  <div class="interview-inner">
+
+    <div class="section-head">
+      <h2>🎤 Interview Practice</h2>
+      <p>Prepare your answers before the real interview.</p>
+    </div>
+
+    <div class="question-display" id="interviewQuestion">
+      Tell me about yourself.
+    </div>
+
+    <div style="text-align:center;">
+      <button class="primary-btn" onclick="nextInterview()">
+        Next Question 🎤
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CODING PRACTICE ================= -->
+
+<section class="section">
+
+  <div class="section-head">
+    <h2>💻 Coding Practice</h2>
+    <p>Try a small JavaScript challenge directly in your browser.</p>
+  </div>
+
+  <div class="card" style="max-width:850px;margin:auto;">
+
+    <h3>Challenge: Print a Message</h3>
+
+    <p style="margin:8px 0 15px;">
+      Write JavaScript that prints <b>Hello Students!</b>
+    </p>
+
+    <textarea
+      id="codeInput"
+      style="width:100%;min-height:170px;padding:15px;border:1px solid #e4d8e3;border-radius:15px;outline:none;"
+      placeholder="console.log('Hello Students!');"
+    ></textarea>
+
+    <button class="primary-btn" onclick="runCode()">
+      Run Code ▶
+    </button>
+
+    <div class="result" id="codeOutput">
+      Output will appear here.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOCUS TIMER ================= -->
+
+<section class="section">
+
+  <div class="section-head">
+    <h2>⏱️ Focus Timer</h2>
+    <p>Use a simple 25-minute study session.</p>
+  </div>
+
+  <div class="timer-box">
+
+    <div class="timer" id="timer">
+      25:00
+    </div>
+
+    <div class="timer-buttons">
+
+      <button class="primary-btn" onclick="startTimer()">
+        Start
+      </button>
+
+      <button class="secondary-btn" onclick="pauseTimer()">
+        Pause
+      </button>
+
+      <button class="secondary-btn" onclick="resetTimer()">
+        Reset
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PLANNER ================= -->
+
+<section class="section planner" id="planner">
+
+  <div class="planner-inner">
+
+    <div class="section-head">
+      <h2>📅 Study Planner</h2>
+      <p>Plan your day and complete your tasks.</p>
+    </div>
+
+    <div class="task-input">
+
+      <input
+        id="taskInput"
+        placeholder="Add a study task..."
+        onkeydown="if(event.key==='Enter') addTask()"
+      >
+
+      <button class="primary-btn" onclick="addTask()">
+        Add Task +
+      </button>
+
+    </div>
+
+    <div class="task-list" id="taskList"></div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= RESUME ================= -->
+
+<section class="section resume" id="resume">
+
+  <div class="resume-inner">
+
+    <div class="section-head">
+      <h2>📄 Resume Builder</h2>
+      <p>Create a simple student resume.</p>
+    </div>
+
+    <div class="card">
+
+      <div class="resume-form">
+
+        <input id="resumeName" placeholder="Full Name">
+
+        <input id="resumeEmail" placeholder="Email">
+
+        <input id="resumePhone" placeholder="Phone">
+
+        <input id="resumeRole" placeholder="Target Role">
+
+        <input id="resumeEducation" class="full" placeholder="Education">
+
+        <input id="resumeSkills" class="full" placeholder="Skills — HTML, Python, C++...">
+
+        <textarea id="resumeProfile" class="full" placeholder="Profile / About Me"></textarea>
+
+        <textarea id="resumeProjects" class="full" placeholder="Projects"></textarea>
+
+      </div>
+
+      <button class="primary-btn" onclick="buildResume()">
+        Generate Resume ✨
+      </button>
+
+      <button class="secondary-btn" onclick="printResume()" style="margin-top:11px;">
+        Print / Save as PDF 📄
+      </button>
+
+      <div class="resume-preview" id="resumePreview"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PROFILE ================= -->
+
+<section class="section profile" id="profile">
+
+  <div class="profile-inner">
+
+    <div class="profile-box">
+
+      <div class="avatar">🎀</div>
+
+      <h2>Student Profile</h2>
+
+      <p>
+        Your progress is saved in this browser.
+      </p>
+
+      <div class="stats">
+
+        <div class="stat">
+          <strong id="profileScore">0</strong>
+          <span>Quiz Score</span>
+        </div>
+
+        <div class="stat">
+          <strong id="profileTasks">0</strong>
+          <span>Tasks</span>
+        </div>
+
+        <div class="stat">
+          <strong id="profileDone">0</strong>
+          <span>Completed</span>
+        </div>
+
+        <div class="stat">
+          <strong id="profileGoal">0</strong>
+          <span>Goal</span>
+        </div>
+
+      </div>
+
+      <div class="achievement">
+
+        <h3>🏆 Achievements</h3>
+
+        <div class="badges">
+
+          <span class="badge-item">🌱 Beginner</span>
+
+          <span class="badge-item">📚 Learner</span>
+
+          <span class="badge-item">💻 Coder</span>
+
+          <span class="badge-item">🎤 Speaker</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= MOTIVATION ================= -->
+
+<section class="motivation">
+
+  <div class="section-head">
+    <h2>🌷 Motivation Corner</h2>
+  </div>
+
+  <div class="quote" id="quote">
+    "Small progress is still progress. Keep going. 💗"
+  </div>
+
+  <button class="primary-btn" onclick="motivate()">
+    Another One ✨
+  </button>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
-<strong>🎀 Students Picks</strong>
-<p>From Student, To Students.</p>
-<p>Made with 💗 for students.</p>
+
+  <h2>🎀 Students Picks</h2>
+
+  <p>From Student, To Students.</p>
+
+  <p>Created by <strong>Sachin Bala 🫶🏻🎀</strong></p>
+
+  <p>Made with curiosity, effort & consistency. 🌷</p>
+
 </footer>
+
 
 <script>
 
-/* =========================
-   LOGIN / SIGN UP
-========================= */
-
-let loginMode=false;
-
-function switchAuth(){
-
-    loginMode=!loginMode;
-
-    document.getElementById("loginName").style.display=
-        loginMode ? "none" : "block";
-
-    document.getElementById("loginSubtitle").textContent=
-        loginMode ? "Welcome back 🎀" : "Create your student account";
-
-    document.getElementById("authButton").textContent=
-        loginMode ? "Login" : "Create Account";
-
-    document.getElementById("switchButton").textContent=
-        loginMode
-        ? "New here? Create Account"
-        : "Already have an account? Login";
-
-    document.getElementById("loginMsg").textContent="";
-}
-
-function handleAuth(){
-
-    const name=document.getElementById("loginName").value.trim();
-    const email=document.getElementById("loginEmail").value.trim().toLowerCase();
-    const password=document.getElementById("loginPassword").value;
-
-    const msg=document.getElementById("loginMsg");
-
-    if(!email || !password || (!loginMode && !name)){
-        msg.textContent="Please fill all required fields.";
-        msg.style.color="#d94b8c";
-        return;
-    }
-
-    let users=JSON.parse(localStorage.getItem("spUsers")||"{}");
-
-    if(!loginMode){
-
-        if(users[email]){
-            msg.textContent="Account already exists. Please login.";
-            msg.style.color="#d94b8c";
-            return;
-        }
-
-        users[email]={
-            name:name,
-            email:email,
-            password:password
-        };
-
-        localStorage.setItem("spUsers",JSON.stringify(users));
-        localStorage.setItem("spCurrent",email);
-
-        enterSite();
-
-    }else{
-
-        if(!users[email] || users[email].password!==password){
-            msg.textContent="Incorrect email or password.";
-            msg.style.color="#d94b8c";
-            return;
-        }
-
-        localStorage.setItem("spCurrent",email);
-        enterSite();
-    }
-}
-
-function enterSite(){
-
-    const email=localStorage.getItem("spCurrent");
-    const users=JSON.parse(localStorage.getItem("spUsers")||"{}");
-    const user=users[email];
-
-    if(!user)return;
-
-    document.getElementById("loginScreen").style.display="none";
-
-    document.getElementById("headerName").textContent=
-        "Hi, "+user.name+" 🎀";
-
-    document.getElementById("profileName").textContent=user.name;
-    document.getElementById("profileEmail").textContent=user.email;
-
-    updateStats();
-}
-
-function logout(){
-
-    localStorage.removeItem("spCurrent");
-    location.reload();
-}
-
-window.addEventListener("load",()=>{
-
-    if(localStorage.getItem("spCurrent")){
-        enterSite();
-    }
-
-    loadGoal();
-});
-
-/* NAVIGATION */
+/* ================= NAVIGATION ================= */
 
 function go(id){
-    document.getElementById(id).scrollIntoView({behavior:"smooth"});
+  document.getElementById(id).scrollIntoView({
+    behavior:"smooth"
+  });
 }
 
-/* LEARNING SEARCH */
+
+/* ================= LEARNING SEARCH ================= */
 
 function searchCards(){
 
-    const value=document.getElementById("search")
-        .value.toLowerCase();
+  const query =
+    document.getElementById("learningSearch")
+    .value
+    .toLowerCase()
+    .trim();
 
-    document.querySelectorAll(".learn-card").forEach(card=>{
+  document.querySelectorAll(".lesson-card").forEach(card => {
 
-        card.style.display=
-            card.dataset.name.toLowerCase().includes(value)
-            ? "block"
-            : "none";
-    });
+    const name = card.dataset.name;
+
+    card.style.display =
+      name.includes(query) ? "" : "none";
+
+  });
+
 }
 
-/* LESSONS */
 
-const lessons={
+/* ================= LESSONS ================= */
 
-html:{
-title:"🌐 HTML Basics",
-body:`
-<p>HTML creates the structure of webpages.</p>
-<pre>&lt;h1&gt;Hello Students!&lt;/h1&gt;
-&lt;p&gt;Welcome!&lt;/p&gt;
-&lt;button&gt;Click Me&lt;/button&gt;</pre>
-<p>Learn headings, paragraphs, links, images, forms and buttons.</p>`
-},
+const lessons = {
 
-css:{
-title:"🎨 CSS Basics",
-body:`
-<p>CSS controls how a webpage looks.</p>
-<pre>h1 {
-  color: purple;
-  font-size: 40px;
-}</pre>
-<p>Learn colors, spacing, layouts, responsive design and animations.</p>`
-},
+  "HTML": `
+    <h2>🌐 HTML Basics</h2>
+    <p>HTML is used to create the structure of a webpage.</p>
 
-python:{
-title:"🐍 Python Basics",
-body:`
-<p>Python is a beginner-friendly programming language.</p>
-<pre>name = "Student"
-print("Hello", name)</pre>
-<p>Next learn conditions, loops, lists and functions.</p>`
-},
+    <h4>Important Tags</h4>
+    <p>
+      &lt;h1&gt; for headings,
+      &lt;p&gt; for paragraphs,
+      &lt;a&gt; for links,
+      &lt;img&gt; for images,
+      &lt;button&gt; for buttons.
+    </p>
 
-cpp:{
-title:"💻 C++ Basics",
-body:`
-<p>C++ is useful for programming fundamentals and problem solving.</p>
-<pre>#include &lt;iostream&gt;
-using namespace std;
+    <h4>Practice</h4>
+    <p>Create a page containing a heading, paragraph, image and button.</p>
+  `,
 
-int main() {
-    cout &lt;&lt; "Hello!";
-    return 0;
-}</pre>`
-},
+  "CSS": `
+    <h2>🎨 CSS Basics</h2>
+    <p>CSS controls the appearance of HTML elements.</p>
 
-java:{
-title:"☕ Java Basics",
-body:`
-<p>Java is an object-oriented programming language.</p>
-<pre>public class Main {
- public static void main(String[] args) {
-  System.out.println("Hello!");
- }
-}</pre>`
-},
+    <h4>Learn These First</h4>
+    <p>
+      Colors, fonts, margins, padding, borders,
+      flexbox, grid and responsive design.
+    </p>
 
-english:{
-title:"🇬🇧 English",
-body:`
-<p>Build English through vocabulary, reading, writing and speaking.</p>
-<p>Learn a word and use it in your own sentence every day.</p>`
-},
+    <h4>Practice</h4>
+    <p>Take a simple HTML page and design it using CSS.</p>
+  `,
 
-grammar:{
-title:"✍️ Grammar",
-body:`
-<p>A basic sentence often follows:</p>
-<pre>Subject + Verb + Object
+  "Python": `
+    <h2>🐍 Python Basics</h2>
+    <p>Python is a beginner-friendly programming language.</p>
 
-She reads books.</pre>
-<p>Practice tenses, articles and subject-verb agreement.</p>`
-},
+    <h4>Core Concepts</h4>
+    <p>
+      Variables, data types, conditions, loops,
+      functions, lists and dictionaries.
+    </p>
 
-communication:{
-title:"🗣️ Communication",
-body:`
-<ul>
-<li>Listen carefully.</li>
-<li>Speak clearly.</li>
-<li>Use simple words.</li>
-<li>Be confident.</li>
-<li>Ask useful questions.</li>
-</ul>`
-},
+    <h4>Practice</h4>
+    <p>Build a calculator or number guessing program.</p>
+  `,
 
-skills:{
-title:"🌟 Student Skills",
-body:`
-<ul>
-<li>Time management</li>
-<li>Problem solving</li>
-<li>Critical thinking</li>
-<li>Teamwork</li>
-<li>Communication</li>
-<li>Consistency</li>
-</ul>`
-},
+  "C++": `
+    <h2>⚙️ C++ Basics</h2>
+    <p>C++ is widely used for programming and problem solving.</p>
 
-interview:{
-title:"🎤 Interview",
-body:`
-<p>Common questions:</p>
-<ul>
-<li>Tell me about yourself.</li>
-<li>What are your strengths?</li>
-<li>What are your weaknesses?</li>
-<li>Why should we choose you?</li>
-<li>Where do you see yourself in five years?</li>
-</ul>`
-}
+    <h4>Core Concepts</h4>
+    <p>
+      Variables, data types, if/else,
+      loops, arrays, functions and classes.
+    </p>
+
+    <h4>Practice</h4>
+    <p>Start with simple mathematical and logical problems.</p>
+  `,
+
+  "Java": `
+    <h2>☕ Java Basics</h2>
+    <p>Java is a popular object-oriented programming language.</p>
+
+    <h4>Core Concepts</h4>
+    <p>
+      Variables, conditions, loops,
+      methods, classes and objects.
+    </p>
+
+    <h4>Practice</h4>
+    <p>Build small console programs to understand the syntax.</p>
+  `,
+
+  "English": `
+    <h2>🇬🇧 English Learning</h2>
+    <p>Improve English through regular reading, writing and speaking.</p>
+
+    <h4>Daily Practice</h4>
+    <p>
+      Learn new words, read short articles,
+      speak for one minute and write a short paragraph.
+    </p>
+  `,
+
+  "Grammar": `
+    <h2>✍️ Grammar Basics</h2>
+    <p>Grammar helps you communicate clearly.</p>
+
+    <h4>Start With</h4>
+    <p>
+      Nouns, pronouns, verbs, adjectives,
+      tenses, articles and prepositions.
+    </p>
+
+    <h4>Tip</h4>
+    <p>Learn grammar through examples instead of memorizing rules only.</p>
+  `,
+
+  "Communication": `
+    <h2>💬 Communication</h2>
+    <p>Good communication is about expressing ideas clearly.</p>
+
+    <h4>Practice</h4>
+    <p>
+      Speak slowly, organize your thoughts,
+      maintain confidence and listen carefully.
+    </p>
+  `,
+
+  "Student Skills": `
+    <h2>🌱 Student Skills</h2>
+    <p>Skills outside academics can make a huge difference.</p>
+
+    <h4>Important Skills</h4>
+    <p>
+      Time management, communication,
+      problem solving, teamwork, consistency and discipline.
+    </p>
+  `,
+
+  "Interview": `
+    <h2>🎤 Interview Preparation</h2>
+    <p>Preparation helps you answer confidently.</p>
+
+    <h4>Practice These</h4>
+    <p>
+      Tell me about yourself,
+      strengths and weaknesses,
+      projects, goals and why you want the role.
+    </p>
+  `,
+
+  "Aptitude": `
+    <h2>🧠 Aptitude</h2>
+    <p>Aptitude practice improves numerical and logical thinking.</p>
+
+    <h4>Important Topics</h4>
+    <p>
+      Percentages, ratios, averages,
+      profit and loss, time and work,
+      number systems and logical reasoning.
+    </p>
+  `,
+
+  "Career Basics": `
+    <h2>📄 Career Basics</h2>
+    <p>Start preparing for your future before graduation.</p>
+
+    <h4>Build</h4>
+    <p>
+      Skills, projects, resume,
+      communication and interview confidence.
+    </p>
+  `
 
 };
 
-function lesson(type){
 
-    const data=lessons[type];
+function lesson(name){
 
-    document.getElementById("lessonContent").innerHTML=
-        `<h3>${data.title}</h3>${data.body}`;
+  document.getElementById("lessonContent").innerHTML =
+    lessons[name] || "<h2>Lesson</h2><p>Content coming soon.</p>";
 
-    document.getElementById("lesson").classList.add("show");
-
-    document.getElementById("lesson")
-        .scrollIntoView({behavior:"smooth"});
+  document.getElementById("lessonPopup").style.display="flex";
 }
 
-function closeLesson(){
-    document.getElementById("lesson").classList.remove("show");
+
+function closeLesson(event){
+
+  if(
+    !event ||
+    event.target === document.getElementById("lessonPopup") ||
+    event.target.classList.contains("close")
+  ){
+    document.getElementById("lessonPopup").style.display="none";
+  }
+
 }
 
-/* QUIZZES */
 
-const quizzes={
+/* ================= QUIZZES ================= */
 
-general:[
-["Which planet is called the Red Planet?",["Earth","Mars","Jupiter","Venus"],1],
-["How many days are in a week?",["5","6","7","8"],2],
-["Capital of India?",["Mumbai","Delhi","Chennai","Kolkata"],1]
-],
+const quizzes = {
 
-english:[
-["Choose the correct sentence.",["She go.","She goes.","She going.","She gone."],1],
-["Opposite of easy?",["Simple","Hard","Fast","Small"],1],
-["Synonym of happy?",["Sad","Angry","Joyful","Weak"],2]
-],
+  General:[
+    {
+      q:"Which planet is known as the Red Planet?",
+      options:["Earth","Mars","Venus","Jupiter"],
+      answer:1
+    },
+    {
+      q:"How many days are there in a leap year?",
+      options:["364","365","366","367"],
+      answer:2
+    },
+    {
+      q:"Which is the largest ocean?",
+      options:["Atlantic","Indian","Pacific","Arctic"],
+      answer:2
+    }
+  ],
 
-coding:[
-["Which language structures webpages?",["HTML","Python","C++","Java"],0],
-["JavaScript single-line comment?",["##","//","<!--","**"],1],
-["Which is a programming language?",["Python","Chrome","Google","Windows"],0]
-],
+  English:[
+    {
+      q:"Choose the correct sentence.",
+      options:[
+        "She go to school.",
+        "She goes to school.",
+        "She going school.",
+        "She gone school."
+      ],
+      answer:1
+    },
+    {
+      q:"Opposite of 'ancient'?",
+      options:["Old","Modern","Past","Historic"],
+      answer:1
+    },
+    {
+      q:"Synonym of 'happy'?",
+      options:["Sad","Angry","Joyful","Tired"],
+      answer:2
+    }
+  ],
 
-grammar:[
-["He ___ playing.",["is","are","am","be"],0],
-["Which is a noun?",["Run","Beautiful","Teacher","Quickly"],2],
-["Past tense of go?",["Goed","Gone","Went","Going"],2]
-],
+  Coding:[
+    {
+      q:"Which language is mainly used to structure webpages?",
+      options:["HTML","Python","C++","Java"],
+      answer:0
+    },
+    {
+      q:"Which symbol is commonly used for a single-line comment in JavaScript?",
+      options:["##","//","<!--","**"],
+      answer:1
+    },
+    {
+      q:"Which data structure stores key-value pairs in many languages?",
+      options:["Dictionary/Map","Stack only","Loop","Compiler"],
+      answer:0
+    }
+  ],
 
-aptitude:[
-["15 + 25 = ?",["30","35","40","45"],2],
-["5 pens cost ₹50. One pen?",["₹5","₹10","₹15","₹20"],1],
-["2,4,6,8, ?",["9","10","11","12"],1]
-]
+  Grammar:[
+    {
+      q:"Choose the correct article: ___ apple.",
+      options:["A","An","Thee","No article"],
+      answer:1
+    },
+    {
+      q:"Which word is a verb?",
+      options:["Beautiful","Run","Quickly","Table"],
+      answer:1
+    },
+    {
+      q:"Choose the correct sentence.",
+      options:[
+        "They is ready.",
+        "They are ready.",
+        "They am ready.",
+        "They be ready."
+      ],
+      answer:1
+    }
+  ],
+
+  Aptitude:[
+    {
+      q:"What is 20% of 100?",
+      options:["10","20","30","40"],
+      answer:1
+    },
+    {
+      q:"Average of 10 and 20?",
+      options:["10","15","20","30"],
+      answer:1
+    },
+    {
+      q:"If 5 × 6 = ?",
+      options:["11","25","30","35"],
+      answer:2
+    }
+  ]
 
 };
 
-let currentQuiz="general";
 
-function renderQuiz(type){
+let currentQuiz="General";
 
-    const box=document.getElementById("quiz-"+type);
-
-    box.innerHTML=quizzes[type].map((q,i)=>`
-
-    <div class="question">
-        <strong>${i+1}. ${q[0]}</strong>
-
-        ${q[1].map((o,j)=>`
-        <label class="option">
-            <input type="radio" name="${type}${i}" value="${j}">
-            ${o}
-        </label>
-        `).join("")}
-
-    </div>
-
-    `).join("");
-}
-
-Object.keys(quizzes).forEach(renderQuiz);
 
 function showQuiz(type,button){
 
-    currentQuiz=type;
+  currentQuiz=type;
 
-    document.querySelectorAll("[id^='quiz-']")
-        .forEach(x=>x.style.display="none");
+  document.querySelectorAll(".quiz-tabs button")
+    .forEach(btn=>btn.classList.remove("active"));
 
-    document.getElementById("quiz-"+type)
-        .style.display="block";
+  button.classList.add("active");
 
-    document.querySelectorAll(".tab")
-        .forEach(x=>x.classList.remove("active"));
+  renderQuiz();
 
-    button.classList.add("active");
-
-    document.getElementById("quizResult")
-        .style.display="none";
 }
+
+
+function renderQuiz(){
+
+  const questions=quizzes[currentQuiz];
+
+  let html=`<div class="quiz-box">`;
+
+  questions.forEach((item,index)=>{
+
+    html+=`
+      <div class="question">
+
+        <p>${index+1}. ${item.q}</p>
+
+        <div class="options">
+
+          ${item.options.map((option,i)=>`
+            <label>
+              <input
+                type="radio"
+                name="question${index}"
+                value="${i}"
+              >
+              ${option}
+            </label>
+          `).join("")}
+
+        </div>
+
+      </div>
+    `;
+
+  });
+
+  html+=`
+    <button class="primary-btn" onclick="scoreQuiz()">
+      Submit Quiz ✨
+    </button>
+
+    <div class="score-box" id="scoreBox"></div>
+
+  </div>`;
+
+  document.getElementById("quizArea").innerHTML=html;
+
+}
+
 
 function scoreQuiz(){
 
-    let score=0;
+  const questions=quizzes[currentQuiz];
 
-    quizzes[currentQuiz].forEach((q,i)=>{
+  let score=0;
 
-        const answer=document.querySelector(
-            `input[name="${currentQuiz}${i}"]:checked`
-        );
+  questions.forEach((item,index)=>{
 
-        if(answer && Number(answer.value)===q[2]){
-            score++;
-        }
-    });
+    const selected=
+      document.querySelector(
+        `input[name="question${index}"]:checked`
+      );
 
-    localStorage.setItem("spScore",score);
-
-    const result=document.getElementById("quizResult");
-
-    result.style.display="block";
-    result.textContent=
-        `🎉 You scored ${score}/${quizzes[currentQuiz].length}!`;
-
-    updateStats();
-}
-
-/* NOTES */
-
-function toggleNote(button){
-
-    const content=button.nextElementSibling;
-
-    content.classList.toggle("show");
-
-    button.textContent=
-        content.classList.contains("show")
-        ? "Close Notes"
-        : "Open Notes";
-}
-
-/* CODING */
-
-function runCode(){
-
-    const code=document.getElementById("codeInput").value;
-    const output=document.getElementById("codeOutput");
-
-    let lines=[];
-
-    const fakeConsole={
-        log:function(...args){
-            lines.push(args.join(" "));
-        }
-    };
-
-    try{
-
-        new Function("console",code)(fakeConsole);
-
-        output.textContent=
-            lines.length
-            ? lines.join("\n")
-            : "Code ran successfully.";
-
-    }catch(error){
-
-        output.textContent="Error: "+error.message;
+    if(selected && Number(selected.value)===item.answer){
+      score++;
     }
+
+  });
+
+  localStorage.setItem("spScore",score);
+
+  document.getElementById("scoreBox").textContent =
+    `You scored ${score}/${questions.length} 🎉`;
+
+  updateStats();
+
 }
 
-/* CALCULATOR */
+
+/* ================= NOTES ================= */
+
+function toggleNote(card){
+
+  const content=card.querySelector(".note-content");
+
+  if(content.style.display==="block"){
+    content.style.display="none";
+  }else{
+    content.style.display="block";
+  }
+
+}
+
+
+/* ================= CALCULATOR ================= */
 
 function calculate(){
 
-    const value=document.getElementById("calc").value;
-    const out=document.getElementById("calcOut");
+  const input=document.getElementById("calcInput").value;
 
-    if(!value.trim()){
-        out.textContent="Enter a calculation.";
-        return;
+  try{
+
+    if(!/^[0-9+\-*/().%\s]+$/.test(input)){
+      throw new Error();
     }
 
-    try{
+    const result=Function(
+      `"use strict";return (${input})`
+    )();
 
-        if(!/^[0-9+\-*/().%\s]+$/.test(value))
-            throw new Error();
+    document.getElementById("calcResult").textContent =
+      `Result: ${result}`;
 
-        out.textContent="Answer: "+Function(
-            '"use strict";return ('+value+')'
-        )();
+  }catch{
 
-    }catch{
-        out.textContent="Invalid calculation.";
-    }
+    document.getElementById("calcResult").textContent =
+      "Please enter a valid calculation.";
+
+  }
+
 }
 
-/* PERCENTAGE */
+
+/* ================= PERCENTAGE ================= */
 
 function percentage(){
 
-    const marks=Number(document.getElementById("marks").value);
-    const total=Number(document.getElementById("total").value);
+  const obtained=
+    Number(document.getElementById("percentObtained").value);
 
-    if(total<=0){
-        document.getElementById("percentOut").textContent=
-            "Enter valid marks.";
-        return;
-    }
+  const total=
+    Number(document.getElementById("percentTotal").value);
 
-    document.getElementById("percentOut").textContent=
-        "Percentage: "+((marks/total)*100).toFixed(2)+"%";
+  if(total<=0){
+
+    document.getElementById("percentResult").textContent =
+      "Enter a valid total.";
+
+    return;
+  }
+
+  const result=(obtained/total)*100;
+
+  document.getElementById("percentResult").textContent =
+    `Percentage: ${result.toFixed(2)}%`;
+
 }
 
-/* AVERAGE */
+
+/* ================= AVERAGE ================= */
 
 function average(){
 
-    const nums=document.getElementById("numbers").value
-        .split(",").map(Number).filter(x=>!isNaN(x));
+  const values=
+    document.getElementById("averageInput")
+    .value
+    .split(",")
+    .map(Number)
+    .filter(v=>!isNaN(v));
 
-    if(!nums.length){
-        document.getElementById("averageOut").textContent=
-            "Enter numbers separated by commas.";
-        return;
-    }
+  if(!values.length){
 
-    const sum=nums.reduce((a,b)=>a+b,0);
+    document.getElementById("averageResult").textContent =
+      "Enter numbers separated by commas.";
 
-    document.getElementById("averageOut").textContent=
-        "Average: "+(sum/nums.length).toFixed(2);
+    return;
+  }
+
+  const result=
+    values.reduce((a,b)=>a+b,0)/values.length;
+
+  document.getElementById("averageResult").textContent =
+    `Average: ${result.toFixed(2)}`;
+
 }
 
-/* SPEAKING */
 
-const speakingTopics=[
-"My dream career",
-"My favorite technology",
-"Why students should learn coding",
-"A person who inspires me",
-"My biggest goal",
-"The future of AI",
-"My favorite hobby",
-"A skill I want to learn",
-"How education can improve",
-"My ideal college life"
-];
-
-function topic(){
-
-    const t=speakingTopics[
-        Math.floor(Math.random()*speakingTopics.length)
-    ];
-
-    document.getElementById("topicOut").textContent=
-        "🎤 "+t;
-}
-
-/* TIPS */
+/* ================= STUDY TIP ================= */
 
 const tips=[
-"Keep your phone away during focused study.",
-"Practice instead of only reading.",
-"Study difficult topics when your energy is high.",
-"Teach someone else what you learned.",
-"Keep your daily goals realistic.",
-"Take short breaks during long study sessions.",
-"Consistency is more important than one perfect day."
+
+  "Study for 25 minutes, then take a short break. 🌱",
+
+  "Keep your phone away while studying. 📚",
+
+  "Practice instead of only reading. ✨",
+
+  "Teach what you learned to someone else. 💡",
+
+  "Consistency beats studying once in a while. 🎀",
+
+  "Sleep well before an important exam. 🌙",
+
+  "Break large tasks into smaller tasks. 🌷"
+
 ];
+
 
 function newTip(){
 
-    document.getElementById("tip").textContent=
-        tips[Math.floor(Math.random()*tips.length)];
+  const random=
+    tips[Math.floor(Math.random()*tips.length)];
+
+  document.getElementById("tipResult").textContent=random;
+
 }
 
-/* GOAL */
+
+/* ================= DAILY GOAL ================= */
 
 function saveGoal(){
 
-    const goal=document.getElementById("goal").value.trim();
+  const goal=
+    document.getElementById("goalInput").value.trim();
 
-    if(!goal)return;
+  if(!goal)return;
 
-    localStorage.setItem("spGoal",goal);
-    loadGoal();
+  localStorage.setItem("spGoal",goal);
+
+  document.getElementById("goalResult").textContent =
+    `Today's Goal: ${goal} 🎯`;
+
+  updateStats();
+
 }
+
 
 function loadGoal(){
 
-    const goal=localStorage.getItem("spGoal");
+  const goal=localStorage.getItem("spGoal");
 
-    if(goal){
-        document.getElementById("goalOut").textContent=
-            "🎯 "+goal;
-    }
+  if(goal){
+
+    document.getElementById("goalResult").textContent =
+      `Today's Goal: ${goal} 🎯`;
+
+    document.getElementById("goalInput").value=goal;
+
+  }
+
 }
 
-/* COMMUNICATION */
 
-const communication=[
-"Tell me about yourself.",
-"Talk about your favorite subject.",
-"What is your biggest goal?",
-"Describe a skill you are learning.",
-"Talk about a person who inspires you.",
-"Why do you want to improve your communication?",
-"What would you change about education?"
+/* ================= SPEAKING TOPICS ================= */
+
+const speakingTopics=[
+
+  "Tell me about yourself.",
+
+  "Why is education important?",
+
+  "What is your biggest goal?",
+
+  "Describe your favorite hobby.",
+
+  "What skill do you want to learn?",
+
+  "How do you manage your time?",
+
+  "What makes a good friend?",
+
+  "Describe a person who inspires you.",
+
+  "What would you like to achieve this year?",
+
+  "The future of technology."
+
 ];
+
 
 let communicationIndex=0;
 
+
 function nextCommunication(){
 
-    communicationIndex=
-        (communicationIndex+1)%communication.length;
+  communicationIndex++;
 
-    document.getElementById("communicationQuestion")
-        .textContent=communication[communicationIndex];
+  if(communicationIndex>=speakingTopics.length){
+    communicationIndex=0;
+  }
+
+  document.getElementById("communicationQuestion")
+    .textContent=speakingTopics[communicationIndex];
+
 }
 
-/* INTERVIEW */
 
-const interview=[
-"What are your strengths?",
-"What are your weaknesses?",
-"Tell me about yourself.",
-"Why should we hire you?",
-"Why do you want this role?",
-"Where do you see yourself in five years?",
-"Tell me about a challenge you solved.",
-"Why should we choose you?"
+/* ================= INTERVIEW ================= */
+
+const interviewQuestions=[
+
+  "Tell me about yourself.",
+
+  "What are your strengths?",
+
+  "What is one weakness you are working on?",
+
+  "Why should we select you?",
+
+  "Where do you see yourself in five years?",
+
+  "Tell me about one project you worked on.",
+
+  "Why do you want this role?",
+
+  "How do you handle pressure?",
+
+  "What are your career goals?",
+
+  "Do you have any questions for us?"
+
 ];
+
 
 let interviewIndex=0;
 
+
 function nextInterview(){
 
-    interviewIndex=
-        (interviewIndex+1)%interview.length;
+  interviewIndex++;
 
-    document.getElementById("interviewQuestion")
-        .textContent=interview[interviewIndex];
+  if(interviewIndex>=interviewQuestions.length){
+    interviewIndex=0;
+  }
+
+  document.getElementById("interviewQuestion")
+    .textContent=interviewQuestions[interviewIndex];
+
 }
 
-/* TIMER */
 
-let seconds=1500;
-let timer=null;
+/* ================= CODING ================= */
+
+function runCode(){
+
+  const code=
+    document.getElementById("codeInput").value;
+
+  const output=[];
+
+  const fakeConsole={
+    log:function(...args){
+      output.push(args.join(" "));
+    }
+  };
+
+  try{
+
+    new Function("console",code)(fakeConsole);
+
+    document.getElementById("codeOutput").textContent =
+      output.length ? output.join("\n") : "Code executed successfully.";
+
+  }catch(error){
+
+    document.getElementById("codeOutput").textContent =
+      "Error: "+error.message;
+
+  }
+
+}
+
+
+/* ================= TIMER ================= */
+
+let timerSeconds=25*60;
+
+let timerInterval=null;
+
 
 function updateTimer(){
 
-    const m=Math.floor(seconds/60)
-        .toString().padStart(2,"0");
+  const minutes=
+    Math.floor(timerSeconds/60)
+    .toString()
+    .padStart(2,"0");
 
-    const s=(seconds%60)
-        .toString().padStart(2,"0");
+  const seconds=
+    (timerSeconds%60)
+    .toString()
+    .padStart(2,"0");
 
-    document.getElementById("time").textContent=m+":"+s;
+  document.getElementById("timer").textContent =
+    `${minutes}:${seconds}`;
+
 }
+
 
 function startTimer(){
 
-    if(timer)return;
+  if(timerInterval)return;
 
-    timer=setInterval(()=>{
+  timerInterval=setInterval(()=>{
 
-        if(seconds>0){
+    if(timerSeconds>0){
 
-            seconds--;
-            updateTimer();
+      timerSeconds--;
 
-        }else{
+      updateTimer();
 
-            clearInterval(timer);
-            timer=null;
+    }else{
 
-            alert("🎉 Focus session complete! Great work. 💗");
-        }
+      clearInterval(timerInterval);
+      timerInterval=null;
 
-    },1000);
+      alert("🎉 Focus session complete! Great job!");
+
+    }
+
+  },1000);
+
 }
+
 
 function pauseTimer(){
 
-    clearInterval(timer);
-    timer=null;
+  clearInterval(timerInterval);
+
+  timerInterval=null;
+
 }
+
 
 function resetTimer(){
 
-    pauseTimer();
-    seconds=1500;
-    updateTimer();
+  pauseTimer();
+
+  timerSeconds=25*60;
+
+  updateTimer();
+
 }
 
-/* PLANNER */
 
-let tasks=JSON.parse(
-    localStorage.getItem("spTasks")||"[]"
-);
+/* ================= PLANNER ================= */
+
+let tasks=
+  JSON.parse(localStorage.getItem("spTasks") || "[]");
+
 
 function saveTasks(){
-    localStorage.setItem("spTasks",JSON.stringify(tasks));
+
+  localStorage.setItem(
+    "spTasks",
+    JSON.stringify(tasks)
+  );
+
 }
+
 
 function renderTasks(){
 
-    const list=document.getElementById("taskList");
+  const list=
+    document.getElementById("taskList");
 
-    list.innerHTML="";
+  if(!tasks.length){
 
-    tasks.forEach((task,index)=>{
-
-        const div=document.createElement("div");
-
-        div.className="task"+(task.done?" done":"");
-
-        div.innerHTML=`
-            <input type="checkbox"
-                ${task.done?"checked":""}
-                onchange="toggleTask(${index})">
-
-            <span>${escapeHtml(task.text)}</span>
-
-            <button class="delete"
-                onclick="deleteTask(${index})">🗑️</button>
-        `;
-
-        list.appendChild(div);
-    });
+    list.innerHTML=
+      `<p style="text-align:center;color:#8a9b92;">
+        No tasks yet 🌱
+      </p>`;
 
     updateStats();
+
+    return;
+  }
+
+  list.innerHTML=tasks.map((task,index)=>`
+
+    <div class="task ${task.done ? "done":""}">
+
+      <input
+        type="checkbox"
+        ${task.done ? "checked":""}
+        onchange="toggleTask(${index})"
+      >
+
+      <span>${escapeHtml(task.text)}</span>
+
+      <button
+        class="delete-btn"
+        onclick="deleteTask(${index})"
+      >
+        Delete
+      </button>
+
+    </div>
+
+  `).join("");
+
+  updateStats();
+
 }
+
 
 function addTask(){
 
-    const input=document.getElementById("taskInput");
-    const text=input.value.trim();
+  const input=
+    document.getElementById("taskInput");
 
-    if(!text)return;
+  const text=input.value.trim();
 
-    tasks.push({
-        text:text,
-        done:false
-    });
+  if(!text)return;
 
-    input.value="";
+  tasks.push({
+    text:text,
+    done:false
+  });
 
-    saveTasks();
-    renderTasks();
+  input.value="";
+
+  saveTasks();
+  renderTasks();
+
 }
 
-function toggleTask(i){
 
-    tasks[i].done=!tasks[i].done;
+function toggleTask(index){
 
-    saveTasks();
-    renderTasks();
+  tasks[index].done=!tasks[index].done;
+
+  saveTasks();
+  renderTasks();
+
 }
 
-function deleteTask(i){
 
-    tasks.splice(i,1);
+function deleteTask(index){
 
-    saveTasks();
-    renderTasks();
+  tasks.splice(index,1);
+
+  saveTasks();
+  renderTasks();
+
 }
+
 
 function escapeHtml(text){
 
-    const div=document.createElement("div");
-    div.textContent=text;
-    return div.innerHTML;
+  const div=document.createElement("div");
+
+  div.textContent=text;
+
+  return div.innerHTML;
+
 }
 
-renderTasks();
 
-/* RESUME */
+/* ================= RESUME ================= */
 
 function buildResume(){
 
-    const name=document.getElementById("rName").value||"Your Name";
-    const email=document.getElementById("rEmail").value;
-    const phone=document.getElementById("rPhone").value;
-    const education=document.getElementById("rEducation").value;
-    const skills=document.getElementById("rSkills").value;
-    const role=document.getElementById("rRole").value;
-    const about=document.getElementById("rAbout").value;
-    const projects=document.getElementById("rProjects").value;
+  const name=
+    document.getElementById("resumeName").value || "Your Name";
 
-    const preview=document.getElementById("resumePreview");
+  const email=
+    document.getElementById("resumeEmail").value;
 
-    preview.style.display="block";
+  const phone=
+    document.getElementById("resumePhone").value;
 
-    preview.innerHTML=`
+  const role=
+    document.getElementById("resumeRole").value;
 
-    <h2 style="color:#d94c8d">
-        ${escapeHtml(name)}
-    </h2>
+  const education=
+    document.getElementById("resumeEducation").value;
+
+  const skills=
+    document.getElementById("resumeSkills").value;
+
+  const profile=
+    document.getElementById("resumeProfile").value;
+
+  const projects=
+    document.getElementById("resumeProjects").value;
+
+  const preview=document.getElementById("resumePreview");
+
+  preview.innerHTML=`
+
+    <h2>${escapeHtml(name)}</h2>
 
     <p>
-        ${escapeHtml(email)}
-        ${email&&phone?" • ":""}
-        ${escapeHtml(phone)}
+      ${escapeHtml(email)}
+      ${email && phone ? " • " : ""}
+      ${escapeHtml(phone)}
     </p>
 
-    <hr style="margin:15px 0">
+    <h3>${escapeHtml(role)}</h3>
 
-    <h3>${escapeHtml(role||"Student")}</h3>
+    <h3>Profile</h3>
+    <p>${escapeHtml(profile)}</p>
 
-    <h4 style="margin-top:15px">Profile</h4>
-    <p>${escapeHtml(about)}</p>
-
-    <h4 style="margin-top:15px">Education</h4>
+    <h3>Education</h3>
     <p>${escapeHtml(education)}</p>
 
-    <h4 style="margin-top:15px">Skills</h4>
+    <h3>Skills</h3>
     <p>${escapeHtml(skills)}</p>
 
-    <h4 style="margin-top:15px">Projects / Achievements</h4>
+    <h3>Projects</h3>
     <p>${escapeHtml(projects)}</p>
-    `;
+
+  `;
+
+  preview.style.display="block";
+
 }
 
-/* MOTIVATION */
+
+/* ================= PRINT RESUME ================= */
+
+function printResume(){
+
+  const preview=
+    document.getElementById("resumePreview");
+
+  if(preview.style.display==="none" || !preview.innerHTML){
+
+    alert("Please generate your resume first.");
+
+    return;
+  }
+
+  const printWindow=window.open("","_blank");
+
+  printWindow.document.write(`
+
+    <html>
+
+      <head>
+
+        <title>Student Resume</title>
+
+        <style>
+
+          body{
+            font-family:Arial,sans-serif;
+            padding:40px;
+            color:#333;
+            line-height:1.6;
+          }
+
+          h2{
+            font-size:30px;
+            margin-bottom:5px;
+          }
+
+          h3{
+            color:#b94f78;
+            margin-top:22px;
+          }
+
+        </style>
+
+      </head>
+
+      <body>
+
+        ${preview.innerHTML}
+
+      </body>
+
+    </html>
+
+  `);
+
+  printWindow.document.close();
+
+  printWindow.focus();
+
+  setTimeout(()=>{
+    printWindow.print();
+  },300);
+
+}
+
+
+/* ================= MOTIVATION ================= */
 
 const quotes=[
-"Small progress is still progress. 🌷",
-"Your skills can take you places. ✨",
-"Learn today. Build tomorrow. 🎀",
-"Consistency beats motivation. 🫶🏻",
-"You don't need to be perfect. Keep going. 🌟",
-"One skill at a time. One step at a time.",
-"Your future self will thank you for starting today. 💕"
+
+  "Small progress is still progress. Keep going. 💗",
+
+  "Your future self will thank you for starting today. 🌷",
+
+  "Don't compare your beginning with someone else's middle. 🎀",
+
+  "One chapter today is better than zero chapters. 📚",
+
+  "You don't need to be perfect. You need to be consistent. ✨",
+
+  "Learn. Practice. Improve. Repeat. 🫶🏻",
+
+  "Your skills can take you places. Keep building them. 🚀"
+
 ];
+
 
 function motivate(){
 
-    document.getElementById("quote").textContent=
-        '"'+quotes[Math.floor(Math.random()*quotes.length)]+'"';
+  const random=
+    quotes[Math.floor(Math.random()*quotes.length)];
+
+  document.getElementById("quote").textContent=
+    `"${random}"`;
+
 }
 
-/* PROFILE */
+
+/* ================= PROFILE STATS ================= */
 
 function updateStats(){
 
-    const score=localStorage.getItem("spScore")||0;
+  const score=
+    Number(localStorage.getItem("spScore") || 0);
 
-    document.getElementById("scoreStat").textContent=score;
-    document.getElementById("taskStat").textContent=tasks.length;
+  const totalTasks=tasks.length;
 
-    const saved=JSON.parse(
-        localStorage.getItem("spBookmarks")||"[]"
-    );
+  const completedTasks=
+    tasks.filter(task=>task.done).length;
 
-    document.getElementById("bookmarkStat").textContent=saved.length;
+  const goal=
+    localStorage.getItem("spGoal") ? 1 : 0;
 
-    let achievement="🌱 Beginner — keep learning!";
+  document.getElementById("profileScore").textContent=score;
 
-    if(score>=3) achievement="⭐ Quiz Starter — 3 correct!";
-    if(tasks.length>=3) achievement="📚 Planner — 3 tasks created!";
-    if(score>=3 && tasks.length>=3)
-        achievement="🏆 Student Pro — keep going!";
+  document.getElementById("profileTasks").textContent=totalTasks;
 
-    document.getElementById("achievement")
-        .textContent=achievement;
+  document.getElementById("profileDone").textContent=completedTasks;
+
+  document.getElementById("profileGoal").textContent=goal;
+
 }
+
+
+/* ================= INITIAL LOAD ================= */
+
+renderQuiz();
+
+renderTasks();
+
+loadGoal();
+
+updateTimer();
 
 updateStats();
 
